@@ -1,11 +1,11 @@
 # Population Preventive Healthcare
-
+<p align="center">
+  <a href="https://github.com/DenverCoder1/readme-typing-svg"><img src="https://readme-typing-svg.herokuapp.com?lines=This repository currently contains a basic version of the website&center=true&width=500&height=50"></a>
+</p>
 <img src="https://www.cureatr.com/hubfs/Bridging%20Care%20Gaps%20With%20Clinical%20Pharmacists.jpeg" width="400" height="300">
 
 - An understanding of care gaps could have a huge impact on society.
 - There are many people who fail to take their lab tests, vaccines or attend appointments, and this could be a life-threatening condition for elderly people.
-
-- This repository currently contains a basic version of the website.
 
 ## Key Features
 
