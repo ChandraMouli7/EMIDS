@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">   
+</head>
+<body>
+    <div class="nav">
+        <form method="post">
+            <input name="search_string" placeholder="Enter Text to Search" id="search">
+            <input type="submit" id="submit-btn">
+        </form>
+    </div>
+    
+<!-- <h1 style="text-align: center; font-family: Arial, Helvetica, sans-serif;">List of Tables</h1><br> -->
+    
+{% for table in tables %}
+    {{ table|safe }}
+{% endfor %}
+
+
+
+</body>
+</html>
