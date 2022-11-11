@@ -1,2 +1,0 @@
-# EMIDS
- Health Care Hackathon
