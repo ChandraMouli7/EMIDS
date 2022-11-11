@@ -5,6 +5,8 @@
 - An understanding of care gaps could have a huge impact on society.
 - There are many people who fail to take their lab tests, vaccines or attend appointments, and this could be a life-threatening condition for elderly people.
 
+- This repository currently contains a basic version of the website.
+
 ## Key Features
 
 - Priority Metric
