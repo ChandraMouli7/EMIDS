@@ -17,4 +17,12 @@
 
 - Filter Searching
 
-     
+ <img src = "https://content.presentermedia.com/files/clipart/00001000/1813/searching_stick_figure_800_wht.jpg" width="100" height="150">
+ 
+- Regular Reminders 
+
+<img src = "https://media.istockphoto.com/id/1173500687/vector/red-alarm-clock-isolated-on-blue-background.jpg?s=612x612&w=0&k=20&c=Ttc6l3lBmrtOmwfTPruG6jmMGj5Y2dPV8OPsQjjYw0E=" width = "100" height = "100">
+
+- Data Analysis
+
+<img src = "https://beyondtheory.co.uk/storage/images/other/2016/08/Beyond-Theory-Data-Analysis-Landing-Page-graphic.png" width = "200" height = "100">
