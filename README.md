@@ -8,4 +8,13 @@
 ## Key Features
 
 - Priority Metric
+
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQJjTKtSFypbulMtb3D66Q4L6HEwDmGpKUtg&usqp=CAU" width="150" height="100">
+
+- Medic Prompts
+
+<img src = "https://img.freepik.com/free-vector/chatbot-artificial-intelligence-abstract-concept-illustration_335657-3723.jpg?w=2000" width = "100" height = "150">
+
+- Filter Searching
+
+     
