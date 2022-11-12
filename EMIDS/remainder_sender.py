@@ -52,13 +52,13 @@ def send_reminder(patient_id, s_date):
 
     
 def send_message(s_date):
-    account_sid = 'ACc5eb134a0871670568c1adbf7c756ebb'
-    auth_token = '85c52de88fc3f7e2b66a1e42d62ca95b'
+    account_sid = ''
+    auth_token = ''
     client = Client(account_sid, auth_token)
     date_time = s_date.strftime("%m-%d-%Y")
     message = client.messages \
                     .create(
                          body="You have an appointment on "+date_time,
-                         from_='+15627845649',
+                         from_='',
                          to='+919940485632'
                      )
