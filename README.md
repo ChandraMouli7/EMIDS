@@ -7,7 +7,6 @@
 
 ## Key Features
 
-
 <table>
   <tr>
     <td>Priority Metric</td>
