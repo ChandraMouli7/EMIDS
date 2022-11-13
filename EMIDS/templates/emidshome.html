@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">  
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous"> 
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <script src="{{url_for('static', filename='index.js')}}"></script>
+    
+
+</head>
+<body>
+
+
+    <nav class="navbar">
+        <label class="navbar-toggle" id="js-navbar-toggle" for="chkToggle">
+                <i class="fa fa-bars"></i>
+            </label>
+        <a href="#" class="logo"><i class="fa fa-heartbeat" style="font-size:50px; color:white; margin-bottom: 8px; "></i></a>
+        <input type="checkbox" id="chkToggle"></input>
+        <ul class="main-nav" id="js-menu">
+          <li>
+            <a href="http://127.0.0.1:5000" class="nav-links">Home</a>
+          </li>
+          <li>
+            <a href="http://127.0.0.1:5000/caregapdetails" class="nav-links">Add Appointment</a>
+          </li>
+          <li>
+            <a href='http://127.0.0.1:5000/patientdetails' class="nav-links">Add Patient</a>
+          </li>
+          <li>
+            <a href='http://127.0.0.1:5000/profiles' class="nav-links">Search Patient</a>
+          </li>
+          <li>
+            <a href="#" class="nav-links">Contact Us</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="container">
+        <div class="row">    
+            <div class="col-xs-8 col-xs-offset-2">
+                <form method="post">
+                <div class="input-group">
+                    <div class="input-group-btn search-panel">
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span id="search_concept">Filter by</span> 
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                          <li>
+                            <input type="radio" id="filter" name="app_type" value="Appointment">
+                            <label for="html">Appointment</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="filter" name="app_type" value="Surgery">
+                            <label for="html">Surgery</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="filter" name="app_type" value="Lab Test">
+                            <label for="html">Lab Test</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" id="filter" name="app_type" value="Vaccination">
+                            <label for="html">Vaccination</label><br>
+                          </li>
+                          <li>
+                            <input type="radio" checked id="filter" name="app_type" value="All">
+                            <label for="html">All</label><br>
+                          </li>
+                        </ul>
+                    </div>
+                    <input type="hidden" name="search_param" value="all" id="search_param">         
+                    <input type="text" class="form-control" name="search_string" placeholder="Search term...">
+                    <span class="input-group-btn">
+                        <input class="btn btn-default" type="submit">
+                    </span>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="nav">
+        <form method="post">
+            <input name="search_string" placeholder="Enter Text to Search" id="search">
+            <input type="submit" id="home-btn">
+        </form>
+        <br>
+    </div> -->
+
+    
+    <!-- <div class="nav">
+        <button style="text-align:center" id="home-btn" onclick="window.location.href = ;">Add an appointment</button>
+        <button style="text-align:center" id="home-btn" onclick="window.location.href = 'http://127.0.0.1:5000/patientdetails';">Add new patient</button>
+
+    </div> -->
+
+
+<h1 style="text-align: center;">Care Gaps</h1><br>
+
+<div class="container">
+    <div class="row">
+{% for i in your_list %}
+
+        <div class="col-lg-4">
+            <div class="card card-margin">
+                <div class="card-header no-border">
+
+
+                    <h5 class="card-title">Patient Name: <a href="{{ url_for('profile', Patient=i[3]) }}">{{ i[3] }}</a></h5>
+                </div>
+                <div class="card-body pt-0">
+                    <div class="widget-49">
+                        <div class="widget-49-title-wrapper">
+                            <div class="widget-49-date-primary">
+                                <span class="widget-49-date-day">{{ i[4][1] }}</span>
+                                <span class="widget-49-date-month">{{ i[4][0] }}</span>
+                            </div>
+                            <div class="widget-49-meeting-info">
+                                <span class="widget-49-pro-title">{{ i[0] }}</span>
+                                <span class="widget-49-meeting-time">{{ i[4][2] }}</span>
+                            </div>
+                        </div>
+                        <ol class="widget-49-meeting-points">
+                            <li class="widget-49-meeting-item"><span>Type: {{i[1]}}</span></li>
+                            <li class="widget-49-meeting-item"><span>Data migration is in scope</span></li>
+                            <li class="widget-49-meeting-item"><span>Session timeout increase to 30 minutes</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>            
+{% endfor %}
+</div>
+</div>
+
+
+
+</body>
+</html>
